@@ -44,7 +44,7 @@ Ensure each answer is less than 50 words and easy to understand for someone with
             }]
         }"""
 
-        question = f"You are {agent}. Follow these commands {command} for this medicine with thier already medical problem:{question}.Output in dictionary with this format {json_format} without triple quotes."
+        question = f"You are {agent}. Follow these commands {command} for this medicine:{question}.Output in dictionary with this format {json_format} without triple quotes."
         response = model.generate_content(question)
         response = ' '.join(response.text.split())
         # Remove the surrounding square brackets
